@@ -5,4 +5,5 @@ import (
 	{{if .time}}"time"{{end}}
 
 	"gorm.io/gorm"
+    "database/sql"
 )
