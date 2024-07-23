@@ -1,36 +1,43 @@
 # gorm-zero
- go zero gorm extension
+
+go zero gorm extension
 
 ### If you use go zero, and you want to use Gorm. You can use this library.
-
 
 # Usage
 
 - add the dependent
+
 ```shell
-go get github.com/SpectatorNan/gorm-zero
+go get github.com/lyf9528/gorm-zero
 ```
-- replace  template/model in your project with gorm-zero/template/{goctl version}/model
+
+- replace template/model in your project with gorm-zero/template/{goctl version}/model
 - generate
+
 ```shell
 goctl model mysql -src={patterns} -dir={dir} -cache --home ./template
 ```
 
 ## Mysql
+
 ### Config
+
 ```go
 import (
-    "github.com/SpectatorNan/gorm-zero/gormc/config/mysql"
+    "github.com/lyf9528/gorm-zero/gormc/config/mysql"
 )
 type Config struct {
     Mysql mysql.Mysql
     ...
 }
 ```
+
 ## Initialization
+
 ```go
 import (
-"github.com/SpectatorNan/gorm-zero/gormc/config/mysql"
+"github.com/lyf9528/gorm-zero/gormc/config/mysql"
 )
 func NewServiceContext(c config.Config) *ServiceContext {
     db, err := mysql.Connect(c.Mysql)
@@ -42,20 +49,24 @@ func NewServiceContext(c config.Config) *ServiceContext {
 ```
 
 ## PgSql
+
 ### Config
+
 ```go
 import (
-"github.com/SpectatorNan/gorm-zero/gormc/config/pg"
+"github.com/lyf9528/gorm-zero/gormc/config/pg"
 )
 type Config struct {
     PgSql pg.PgSql
     ...
 }
 ```
+
 ## Initialization
+
 ```go
 import (
-"github.com/SpectatorNan/gorm-zero/gormc/config/pg"
+"github.com/lyf9528/gorm-zero/gormc/config/pg"
 )
 func NewServiceContext(c config.Config) *ServiceContext {
     db, err := pg.Connect(c.PgSql)
@@ -69,6 +80,7 @@ func NewServiceContext(c config.Config) *ServiceContext {
 ## Useage
 
 ### Query With Cache And Custom Expire Duration
+
 ```go
     gormzeroUsersIdKey := fmt.Sprintf("%s%v", cacheGormzeroUsersIdExpirePrefix, id)
     var resp Users
@@ -86,6 +98,7 @@ func NewServiceContext(c config.Config) *ServiceContext {
 ```
 
 ### Query With Cache And Default Expire Duration
+
 ```go
     gormzeroUsersIdKey := fmt.Sprintf("%s%v", cacheGormzeroUsersIdPrefix, id)
     var resp Users
@@ -102,6 +115,6 @@ func NewServiceContext(c config.Config) *ServiceContext {
     }
 ```
 
-
 ## Usage Example
+
 - go zero model example link: [gorm-zero-example](https://github.com/SpectatorNan/gorm-zero-example)
