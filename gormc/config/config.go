@@ -1,11 +1,12 @@
 package config
 
 import (
-	"github.com/SpectatorNan/gorm-zero/gormc/logger"
-	gormLogger "gorm.io/gorm/logger"
 	"log"
 	"os"
 	"time"
+
+	"github.com/lyf9528/gorm-zero/gormc/logger"
+	gormLogger "gorm.io/gorm/logger"
 )
 
 type GormLogConfigI interface {

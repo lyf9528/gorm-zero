@@ -2,7 +2,8 @@ package pagex
 
 import (
 	"context"
-	"github.com/SpectatorNan/gorm-zero/gormc"
+
+	"github.com/lyf9528/gorm-zero/gormc"
 	"gorm.io/gorm"
 )
 

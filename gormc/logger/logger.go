@@ -3,10 +3,11 @@ package logger
 import (
 	"context"
 	"errors"
-	"github.com/SpectatorNan/gorm-zero/gormc/utils"
+	"time"
+
+	"github.com/lyf9528/gorm-zero/gormc/utils"
 	"github.com/zeromicro/go-zero/core/logx"
 	gormLogger "gorm.io/gorm/logger"
-	"time"
 )
 
 func NewZeroLog(config gormLogger.Config) gormLogger.Interface {

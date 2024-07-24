@@ -3,12 +3,14 @@ package mysql
 import (
 	"errors"
 	"fmt"
-	"github.com/SpectatorNan/gorm-zero/gormc/config"
-	"github.com/SpectatorNan/gorm-zero/gormc/plugins"
+
+	"time"
+
+	"github.com/lyf9528/gorm-zero/gormc/config"
+	"github.com/lyf9528/gorm-zero/gormc/plugins"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
-	"time"
 )
 
 type Mysql struct {
